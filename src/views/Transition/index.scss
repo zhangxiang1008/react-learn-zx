@@ -1,0 +1,79 @@
+.contentCss {
+  height: 100px;
+  background: #fffada;
+}
+
+.cssContainer {
+  height: 200px;
+}
+
+.contentSwitch {
+  height: 100px;
+  background: #fffada;
+}
+
+.show-enter {
+  opacity: 0.01;
+  transform: scale(0.9) translateY(50%);
+}
+
+.show-enter-active {
+  opacity: 1;
+  transform: scale(1) translateY(0%);
+  transition: all 1300ms ease-out;
+}
+
+.show-exit {
+  opacity: 1;
+  transform: scale(1) translateY(0%);
+}
+
+.show-exit-active {
+  opacity: 0.01;
+  transform: scale(0.9) translateY(50%);
+  transition: all 1300ms ease-out;
+}
+
+.btn-enter {
+  transform: translate(100%, 0);
+  opacity: 0;
+}
+
+.btn-enter-active {
+  transform: translate(0, 0);
+  opacity: 1;
+  transition: all 500ms;
+}
+
+.btn-exit {
+  transform: translate(0, 0);
+  opacity: 1;
+}
+
+.btn-exit-active {
+  transform: translate(-100%, 0);
+  opacity: 0;
+  transition: all 500ms;
+}
+
+.friend-enter {
+  transform: translate(100%, 0);
+  opacity: 0;
+}
+
+.friend-enter-active {
+  transform: translate(0, 0);
+  opacity: 1;
+  transition: all 500ms;
+}
+
+.friend-exit {
+  transform: translate(0, 0);
+  opacity: 1;
+}
+
+.friend-exit-active {
+  transform: translate(-100%, 0);
+  opacity: 0;
+  transition: all 500ms;
+}

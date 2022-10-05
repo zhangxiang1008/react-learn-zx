@@ -1,0 +1,31 @@
+.loginPage {
+  position: fixed;
+  left: 0;
+  right: 0;
+  top: 0;
+  bottom: 0;
+  // background-image: url(`../../../../assets/bg.jpg);
+  background-repeat: no-repeat;
+  background-size: cover;
+
+  .formDiv {
+    background: #ffffff;
+    width: 400px;
+    padding: 10px;
+    position: fixed;
+    left: 30%;
+    top: 30%;
+    border-radius: 10px;
+  }
+
+  .formTitle {
+    font-size: 18px;
+    font-weight: 600;
+    padding: 10px;
+    text-align: center;
+  }
+
+  .loginForm {
+    margin-top: 20px;
+  }
+}
