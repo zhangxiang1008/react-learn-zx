@@ -12,6 +12,7 @@ const NotFound = lazy(() => import('../views/NotFound'))
 const MouseCatch = lazy(() => import('../views/MouseCatch'))
 const MyTransition = lazy(() => import('../views/Transition'))
 const Table = lazy(() => import('../views/Tables'));
+const Generator = lazy(() => import('../views/JavaScript/generator'));
 // 实现懒加载的用Suspense包裹 定义函数
 const lazyLoad = (children: ReactNode): ReactNode => {
   return <Suspense fallback={<h1>Loading...</h1>}>
@@ -51,19 +52,6 @@ export const routers = [
             element: lazyLoad(<Detail />),
 
           },
-          // {
-          //   title: 'ExpandTable',
-          //   key: 'expandTable',
-          //   children: [
-          //     {
-          //       index: true,
-          //       path: '/expand1',
-          //       title: 'expand1',
-          //       key: 'expand1',
-          //       element: lazyLoad(<Home />),
-          //     }
-          //   ]
-          // },
         ]
       },
       {
@@ -78,6 +66,20 @@ export const routers = [
         key: 'tansition',
         element: lazyLoad(<MyTransition />)
       },
+      {
+        title: 'JavaScript',
+        key: 'JavaScript',
+        children: [
+          {
+            index: true,
+            path: '/generator',
+            title: 'Generator',
+            key: 'Generator',
+            element: lazyLoad(<Generator />),
+
+          },
+        ]
+      }
     ]
   },
   {

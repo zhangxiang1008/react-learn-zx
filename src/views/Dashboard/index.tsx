@@ -6,6 +6,8 @@ import ListCard from './components/ListCard'
 import { ListItem } from './components/ListCard'
 export default function Dashboard() {
   const [number, setNumber] = useState(1);
+  const [total, setTotal] = useState(100);
+
   const [messageList, setMessageList] = useState<ListItem[]>([
     {
       type: 'info',
@@ -32,7 +34,6 @@ export default function Dashboard() {
   }
   function scheduler(task: any) {
     const taskObj = task.next(task.value);
-    console.log(taskObj)
     // 如果Generator函数未结束，就继续调用
     if (!taskObj.done) {
       task.value = taskObj.value
@@ -77,10 +78,10 @@ export default function Dashboard() {
         <div className='content'>
           <div className='left'>
             <div className='cards'>
-              <MediumCard name='总额' number='123' childNode={childNode}></MediumCard>
-              <MediumCard name='总额' number='123' childNode={childNode}></MediumCard>
-              <MediumCard name='总额' number='123' childNode={childNode}></MediumCard>
-              <MediumCard name='总额' number='123' childNode={childNode}></MediumCard>
+              <MediumCard name='总额' number={total} childNode={childNode}></MediumCard>
+              <MediumCard name='总额' number={total} childNode={childNode}></MediumCard>
+              <MediumCard name='总额' number={total} childNode={childNode}></MediumCard>
+              <MediumCard name='总额' number={total} childNode={childNode}></MediumCard>
             </div>
           </div>
           <div className='right'>

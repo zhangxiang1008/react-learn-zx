@@ -2,7 +2,7 @@ import React, { ReactNode, FC, useEffect } from 'react'
 import './index.scss'
 interface MediumCardProps {
   name: string;
-  number: string;
+  number: any;
   childNode: ReactNode
 }
 const MediumCard: FC<MediumCardProps> = (props: MediumCardProps) => {
@@ -18,7 +18,7 @@ const MediumCard: FC<MediumCardProps> = (props: MediumCardProps) => {
           {name}
         </div>
         <div className='number'>
-          {number}
+          {number + ''}
         </div>
       </div>
       <div className='bottom'>
