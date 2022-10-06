@@ -24,7 +24,7 @@ const Index: FC = () => {
 
   const promise1 = new Promise((resolve, reject) => {
     setTimeout(() => {
-      reject('failed')
+      // reject('failed')
       // resolve('success')
     }, 2000)
   })
